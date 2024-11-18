@@ -1,0 +1,146 @@
+.dataDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 24px;
+    transition: filter 0.3s ease;
+  }
+
+  .dataDisplayContainer.blurred {
+    filter: blur(8px);
+    pointer-events: none; /* Disable interaction with blurred cards */
+  }
+  
+  .dimmedOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Behind the expanded card */
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #2581D9;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .cardContent {
+    padding: 16px;
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .gameTitle {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .gamePrice {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+  }
+
+  .highlight {
+    background-color: yellow; /* Or another highlight color */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .userRating {
+    font-size: 0.700rem;
+    color: #fff;
+    /* margin-top: 8px; */
+    margin-bottom: 8px;
+  }
+  
+  /* Expanded card styling */
+  .expandedCardContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .expandedCard {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .expandedTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .expandedImage {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .expandedDescription {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .expandedPrice {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .expandedRating {
+    font-size: 1rem;
+    color: gray;
+  }

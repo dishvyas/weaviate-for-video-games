@@ -1,0 +1,116 @@
+/* Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for separation */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  .navbarScrolled {
+    background-color: #2581D9; /* White background when scrolling */
+    color: #000; /* Black font for white background */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit; /* Use the parent navbar's color */
+    transition: color 0.3s;
+}
+  
+  .logo {
+    font-size: 1.5rem;
+    font-family: jaro;
+    font-weight: bold;
+    color: #fff; /* Vibrant yellow for logo */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks li {
+    margin-left: 20px;
+  }
+  
+  .navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Jaro';
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navLinks a:hover {
+    color: #facc15; /* Same vibrant yellow for hover */
+  }
+  
+  .navLinks a.active {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Search Bar */
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push to the far right */
+  }
+  
+  .searchInput {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: white;
+    color: black;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .searchInput:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navLinks li {
+      margin: 10px 0;
+    }
+  
+    .searchContainer {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    .searchInput {
+      width: 100%;
+    }
+  }

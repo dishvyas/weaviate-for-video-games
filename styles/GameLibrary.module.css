@@ -1,0 +1,254 @@
+/* General container styling */
+
+.libraryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.searchFilterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; 
+    margin-bottom: 20px;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    color: black;
+}
+
+.cardsContainer {
+    display: grid;
+    gap: 20px;
+    width: 100%; /* Full width for cards */
+    max-width: 1200px; /* Optional max-width for a cleaner look */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(109,40,217,var(--tw-bg-opacity));
+    color: black;
+}
+
+.filterIconButton {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.filterIcon {
+    height: 24px;
+    width: 24px;
+    color: black; 
+}
+
+/* Filter section styling */
+.filterContainer {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    z-index: 10;
+    background-color: #4F4F4F;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top : 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px; */
+}
+
+.filterItem {
+    margin-bottom: 15px;
+}
+
+.filterLabel {
+    /* font-weight: bold; */
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.slider {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Other adjustments for specific controls */
+.rangeSlider {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.filterInputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filterInput {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Sort section styling */
+.sortContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* margin-top: 20px; */
+    /* padding: 15px; */
+    justify-content: center; 
+    /* background-color: rgba(255, 255, 255, 0.2);  */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    position: relative;
+  }
+  
+  /* Label Styling */
+  .sortLabel {
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    font-size: 16px;
+  }
+  
+  /* Dropdown Styling */
+  .sortIconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* .sortIconButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  } */
+  
+  .sortIcon {
+    width: 24px;
+    height: 24px;
+    color: black;
+  }
+  
+  .sortDropdown {
+    position: absolute;
+    top: 100%; /* Position below the sort button */
+    left: 0;
+    z-index: 10;
+    background: #4F4F4F;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 200px;
+  }
+  
+  .sortOption {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sortOption:hover {
+    background-color: #3a3a3a;
+  }
+
+/* Card styling */
+.dataDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+.gameTitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.gameRating {
+    font-size: 1em;
+    font-weight: 500;
+    color: #ff9800;
+    margin-bottom: 8px;
+}
+
+.reviewText {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .label-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .label-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .label-dropdown:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+  }
