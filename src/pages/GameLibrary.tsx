@@ -249,12 +249,6 @@ const GameLibrary: React.FC = () => {
     >
       Price: High to Low
     </div>
-    <div
-      className={styles.sortOption}
-      onClick={() => setSortOption('Game Length: Longest to Shortest')}
-    >
-      Game Title (Z to A)
-    </div>
     {/* <div
       className={styles.sortOption}
       onClick={() => setSortOption('Release Year: Newest to Oldest')}

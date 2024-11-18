@@ -3,18 +3,13 @@ import React, { useContext, useState, useEffect} from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Navbar.module.css';
-import { SearchContext } from '../pages/_app';
+
 
 
 const Navbar: React.FC = () => {
   const router = useRouter();
 
-  const { searchTerm, setSearchTerm } = useContext(SearchContext);
   const [ scrolled, setScrolled ] = useState(false);
-
-  // const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setSearchTerm(event.target.value); // Update global search term
-  // };
 
   useEffect(() => {
     const handleScroll = () => {
