@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Game Library App**
 
-## Getting Started
+This is a [Next.js](https://nextjs.org) project bootstrapped with [create-next-app](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-First, run the development server:
+**Features**
+
+-  Search, sort, and filter games in the library.
+
+-  Backend powered by [Weaviate](https://weaviate.io), with data from a Kaggle dataset (dummy link for now).
+
+-  Easy setup and testing instructions provided below.
+
+
+**Getting Started**
+
+**Prerequisites**
+
+-  **Python**: Ensure Python is installed on your machine.
+
+-  **Node.js**: Install [Node.js](https://nodejs.org/) (v16 or above recommended).
+
+-  **npm or yarn**: Package manager for managing dependencies.
+
+
+
+**Setup**
+
+**1\. Python Virtual Environment**
+
+1.  Create a virtual environment:
+
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+python -m venv weaviate_env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  Activate the virtual environment:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-  On Windows:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+weaviate_env\Scripts\activate
+```
 
-## Learn More
+-  On macOS/Linux:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+source weaviate_env/bin/activate
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.  Install the Python dependencies:
+```bash
+pip install -r requirements.txt
+```
+**2\. Set Up Weaviate**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  Run the weaviate.ipynb Jupyter notebook to set up the schema and add data to your Weaviate cloud instance.
 
-## Deploy on Vercel
+2.  Data is sourced from a Kaggle dataset. The .json file with the data is located in the root directory of this project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Dataset Link : [Kaggle](https://www.kaggle.com/datasets/jahnavipaliwal/video-game-reviews-and-ratings/data)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**3\. Install Node.js Dependencies**
+
+1.  Run the following command to install the required npm packages:
+```bash
+npm install
+```
+**4\. Run the Development Server**
+
+1.  Start the development server:
+```bash
+npm run dev
+```
+2.  Open your browser and navigate to <http://localhost:3000>.
+
+**Testing the Application**
+
+**Routes**
+
+1.  /: Home page of the application.
+
+2.  /GameLibrary: Access the game library. You can:
+
+-  Search for games by title.
+
+-  Sort games by different attributes (e.g., rating, price, etc.).
+
+-  Apply filters for a more customized view.
+
