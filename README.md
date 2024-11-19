@@ -77,6 +77,15 @@ source weaviate_env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+**** Before populating schema and data onto weaviate cloud, create .env file with following: ****
+```bash
+WCD_URL=your-weaviate-host               # Base URL of your Weaviate Cloud instance
+WCD_API_KEY=your-weaviate-api-key        # API key for secure backend access to Weaviate
+NEXT_PUBLIC_WEAVIATE_BASE_URL=public-graphql-js  # Public GraphQL endpoint for frontend
+NEXT_PUBLIC_WEAVIATE_API_KEY=api-key-js  # API key for frontend use (public-facing)
+```
+
 **2\. Set Up Weaviate**
 
 1.  Run the weaviate.ipynb Jupyter notebook to set up the schema and add data to your Weaviate cloud instance.
