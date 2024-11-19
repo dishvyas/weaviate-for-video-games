@@ -78,7 +78,7 @@ source weaviate_env/bin/activate
 pip install -r requirements.txt
 ```
 
-**** Before populating schema and data onto weaviate cloud, create .env file with following: ****
+**Before populating schema and data onto weaviate cloud, create .env file with following:**
 ```bash
 WCD_URL=your-weaviate-host               # Base URL of your Weaviate Cloud instance
 WCD_API_KEY=your-weaviate-api-key        # API key for secure backend access to Weaviate
